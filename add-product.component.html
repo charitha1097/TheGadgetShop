@@ -1,0 +1,49 @@
+<h3>Add products</h3>
+<div [hidden]="submitted" style="width:400px;">
+	<form (ngSubmit)="onSubmit()">
+		<div class="form-group">
+			<label for="product_id">Product Id</label>
+			<input type="text" class="form-control" id="product_id" required [(ngModel)]="product.product_id" name="product_id">
+		</div>
+		<div class="form-group">
+			<label for="category_type">Category Type</label>
+			<input type="text" class="form-control" id="category_type" required [(ngModel)]="product.category_type" name="category_type">
+		</div>
+		<div class="form-group">
+			<label for="create_time">Create Date</label>
+			<input type="calender" class="form-control" id="create_time" required [(ngModel)]="product.create_time" name="create_time">
+		</div>
+		<div class="form-group">
+			<label for="product_description">Product Description</label>
+			<input type="text" class="form-control" id="product_description" required [(ngModel)]="product.product_description" name="product_description">
+		</div>
+		<div class="form-group">
+			<label for="product_icon">Product Icon</label>
+			<input type="text" class="form-control" id="product_icon" required [(ngModel)]="product.product_icon" name="product_icon">
+		</div>
+		<div class="form-group">
+			<label for="product_name">Product Name</label>
+			<input type="text" class="form-control" id="product_name" required [(ngModel)]="product.product_name" name="product_name">
+		</div>
+		<div class="form-group">
+			<label for="product_price">Product Price</label>
+			<input type="text" class="form-control" id="product_price" required [(ngModel)]="product.product_price" name="product_price">
+		</div>
+		<div class="form-group">
+			<label for="product_status">Product Status</label>
+			<input type="text" class="form-control" id="product_status" required [(ngModel)]="product.product_status" name="product_status">
+		</div>
+		<div class="form-group">
+			<label for="product_stock">Product Stock</label>
+			<input type="text" class="form-control" id="product_stock" required [(ngModel)]="product.product_stock" name="product_stock">
+		</div>
+		<div class="form-group">
+			<label for="update_time">Update Date</label>
+			<input type="calender" class="form-control" id="update_time" required [(ngModel)]="product.update_time" name="update_time">
+		</div>
+		<button type="submit" class="btn btn-success">Submit</button>
+	</form>
+</div>
+<div [hidden]="!submitted">
+	<h4>You have submitted the details successfully!!!</h4>
+</div>
